@@ -36,6 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     http.csrf().disable()
         .authorizeRequests()
+        //solo los miembros del rol admin podrán realizar altas
+        //y para ver la lista de libros, tendrán que estar autenticados
         .antMatchers(HttpMethod.POST,"/nuevoCurso").hasRole("ADMIN")
         .antMatchers(HttpMethod.DELETE,"/borrarCurso/**").hasAnyRole("ADMIN","OPERADOR")
         .antMatchers(HttpMethod.PUT,"/actualizarCurso/**").hasAnyRole("ADMIN","OPERADOR")

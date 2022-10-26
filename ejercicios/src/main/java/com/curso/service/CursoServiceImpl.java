@@ -17,8 +17,8 @@ public class CursoServiceImpl implements CursoService{
     cursos.add(new Curso("001","Informática",100,650));
     cursos.add(new Curso("002","Comercial",150,250.50));
     cursos.add(new Curso("003","Teleoperador",80,520.50));
-    cursos.add(new Curso("004","Cocina",110,150));
-    cursos.add(new Curso("005","Integración social",50,200));
+    cursos.add(new Curso("004","Cocina",20,150));
+    cursos.add(new Curso("005","Integración social",40,200));
   }
 
 
