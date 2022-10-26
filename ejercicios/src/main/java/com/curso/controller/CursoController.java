@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class CursoController {
 
   @Autowired
-  CursoService cursoService;
+  private CursoService cursoService;
 
   @GetMapping(value = "/cursos",produces = MediaType.APPLICATION_JSON_VALUE)
   public List<Curso> todosCursos (){
