@@ -1,10 +1,9 @@
+server:
+  port: 8081
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
     registerWithEureka: true 
-  instance:
-     instance-id: instancia3
-server:
-  port: 8082
+
   
