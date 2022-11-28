@@ -1,16 +1,15 @@
-server:
-  port: 8081
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
     registerWithEureka: true 
-    
+server:
+  port: 8081
+  
 spring:
-    mvc:
-    pathmatch:
-      matching-strategy: ant-path-matcher
-
   h2:
     console:
       enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
