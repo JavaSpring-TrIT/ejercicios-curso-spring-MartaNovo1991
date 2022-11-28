@@ -19,12 +19,8 @@
 	</properties>
 	<dependencies>
 		<dependency>
-<<<<<<< HEAD:configServer/serverConfig/pom.xml
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
-=======
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,7 +35,6 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.24</version>
->>>>>>> 8e7f7e1cbd3a5813c334db138d5c11a7359bb02c:ejercicios/pom.xml
 		</dependency>
 
 		<dependency>
