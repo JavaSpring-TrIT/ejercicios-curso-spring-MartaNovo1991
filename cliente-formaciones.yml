@@ -5,3 +5,11 @@ eureka:
     registerWithEureka: true 
 server:
   port: 9000
+  
+spring:
+  h2:
+    console:
+      enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
