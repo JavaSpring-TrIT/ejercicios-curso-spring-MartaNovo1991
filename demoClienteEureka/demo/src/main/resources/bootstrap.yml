@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: cliente-formaciones
+  cloud:
+    config:
+      uri: http://localhost:8888

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: servidor-gateway
+  cloud:
+    discovery:
+      enable: true
+    gateway:
+      default-filters:
+      - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+      - id: cursos
+        uri: lb://servicio-cursos
+        predicates:
+        - Path=/scursos/**
+        filters:
+        - RewritePath=/scursos/*, /
+
+      - id: formaciones
+        uri: lb://cliente-formaciones
+        predicates:
+        - Path=/sformaciones/**
+        filters:
+        - RewritePath=/sformaciones/*, /
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

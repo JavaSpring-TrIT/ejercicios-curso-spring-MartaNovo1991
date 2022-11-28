@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+  h2:
+    console:
+      enabled: true
+  application:
+    name: servicio-cursos
+
+
+
+
